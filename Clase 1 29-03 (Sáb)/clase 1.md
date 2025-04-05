@@ -9,7 +9,7 @@ Enrique reinosa, Juan pablo y Ezequiel Escobar
 
 
 **Javascript**
-![Javascript](image.png)
+![Javascript](/img/image.png)
 
 Lenguaje de scripting: Lenguaje que originalmente estaba pensado para dar dinamismo a los sitios web y no mucho más, pero a través de su evolución se transformo en un lenguaje de uso general7
 
