@@ -17,11 +17,11 @@ determinan una parte del comportamiento del mismo.
 ---
 ## Formas de representar un componente en un Diagrama UML
 
-![alt text](image-4.png)
+![componente](img/image-4.png)
 
 
 
-![Dependencia de componentes](image-1.png)
+![Dependencia de componentes](img/image-1.png)
 
 En esta imagen se puede apreciar como el compoenente de la izquierda consume la interfaz expuesta por el componente de la derecha. 
 
@@ -32,7 +32,7 @@ En esta imagen se puede apreciar como el compoenente de la izquierda consume la 
 
 * Las capas superiores usan servicios de las inferiores, pero no así de forma contraria o saltando niveles
 
-![Modelo de capas](image.png)
+![Modelo de capas](img/image.png)
 
 1. Presentación $\Rightarrow$ La interfaz que se expone, es la capa externa 
 2. Dominio $\Rightarrow$ Todas las reglas del negocio / proceso
@@ -47,7 +47,7 @@ interactúa el usuario.
 * Se ejecuta en el navegador o en una aplicación cliente (aplicación
 mobile, por ejemplo) y se encarga de la presentación de la información y
 la experiencia de usuario.
-![Frontend vs Backend](image-2.png)
+![Frontend vs Backend](img/image-2.png)
 
 ---
 ### Framework vs biblioteca 
