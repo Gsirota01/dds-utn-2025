@@ -1,6 +1,7 @@
 # Clase 1
 [[29/03/2025]]
 
+![Presentación clase](https://drive.google.com/file/d/16e0Dathb8dyvLu0XOdSQ8NU6jUudjh__/view)
 * Clases los lunes
 * Talleres los Sábados
 
