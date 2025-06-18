@@ -1,19 +1,20 @@
+### [Presentación clase](https://drive.google.com/file/d/16e0Dathb8dyvLu0XOdSQ8NU6jUudjh__/view?usp=sharing)
+
 
 #### Desarrollo de Software
-* Se puede definir al D. de SW como el proceso sistemático de conepción de diseño, implementación, pruebas, despliegue  y mantenimiento de sistemas de software.
+* Se puede definir al D. de SW como el proceso sistemático de concepción de diseño, implementación, pruebas, despliegue  y mantenimiento de sistemas de software.
 * Implica la aplicación de principios de ingeniería, metodologías y herramientas para crear SW eficiente, escalable y mantenible que cumpla con requisitos funcionales y no funcionales
 
 #### Arq. de Software
 
-* Estructura/s del sistema que consiste en componentes de SW, las propiedades externas visibles de esps componentes y las relaciones entre ellos.
+* Estructura/s del sistema que consiste en componentes de SW, las propiedades externas visibles de esos componentes y las relaciones entre ellos.
 * Un **componente** es una pieza de software que puede ser código fuente, código binario,
 un ejecutable, o una biblioteca con una interfaz definida.
 * Cada componente tiene su **ciclo de vida**: repositorio, equipo que lo mantiene, esquema de versionado, agenda de despliegues, etc.
 
 * ¿Qué es la interfaz de un componente?
 
-    * Una interfaz establece las operaciones externas de un componente, las cuales
-determinan una parte del comportamiento del mismo.
+    * Una interfaz establece las operaciones externas de un componente, las cuales determinan una parte del comportamiento del mismo.
 
 ---
 ## Formas de representar un componente en un Diagrama UML
@@ -53,12 +54,9 @@ la experiencia de usuario.
 ---
 ### Framework vs biblioteca 
 #### Biblioteca
-* La biblioteca se desarrolla, se compila y se carga de forma separada al
-código de nuestra aplicación, pero las funcionalidades que define son
-utilizadas indistintamente por nuestro código como si de parte de él se
-tratase.
+* La biblioteca se desarrolla, se compila y se carga de forma separada al código de nuestra aplicación, pero las funcionalidades que define son utilizadas indistintamente por nuestro código como si de parte de él se tratase.
 * Resuelven un problema de reutilización de lógica asociada a abstracciones, representada e implementada a través de código
-* Una biblioteca posee **`control directo`**, porque el control de fluo del programa es controlado por el programador. Es éste quien llama a las operaciones definidas por la libreria
+* Una biblioteca posee **`control directo`**, porque el control de fluo del programa es controlado por el programador. Es éste quien llama a las operaciones definidas por la librería
 * Las bibliotecas son llamadas por nosotros cuando **`las necesitamos`**
 
 #### Framework

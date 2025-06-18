@@ -1,0 +1,170 @@
+:root {
+    --color-principal: #25c19f;
+    --color-secundario: #54c7ec;
+    --negro: #2b3137;
+    --gris: #f5f6f7;
+    --gris-oscuro: #606770;
+    --gradiente: linear-gradient(90deg, #9800ff 0%, #f62929 50%, #ffa908 100%);
+    --sombra: 0 1px 2px 0 #0000001a;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+#hero{
+    background-color: var(--negro);
+    padding : 1em
+}
+
+h1 {
+    color: white;
+    font-size: 3.5em;
+    
+    span{
+        color: var(--color-principal);
+    }
+
+}
+
+nav{
+    display:flex;
+    align-items: center;
+    gap: 0.5em;
+    padding : 0 3em;
+}
+
+ul{
+    gap: 0.6em;
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    margin-right : auto;
+}
+
+.boton{
+    background-color: var(--color-principal);
+    border-radius: 0.5em;
+    padding: 0.4em;
+    color : var(--negro);
+    text-decoration: none;
+    
+}
+
+.boton.secundario{
+    background-color: var(--color-secundario);
+}
+
+.ctas{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+#banner{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#banner p {
+    background: var(--gradiente);
+    font-size: 3rem;
+    font-weight: bold;
+    background-clip: text;
+    color:transparent;
+}
+
+#banner p::before {
+    content: "🎉 ";
+    color: initial;
+}
+
+#banner p::after {
+    content: " 🥳";
+    color: initial;
+}
+
+#features{
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: center;
+}
+
+.feature{
+    line-height: 1.5;
+    text-align: center;
+    width: 300px;
+}
+
+.feature img{
+    width: 250px;
+}
+
+#video{
+    margin-top: 5em;
+}
+
+#iframe-container{
+    display: flex;
+    justify-content: center;
+}
+
+.columna{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.columna .card{
+    margin-bottom: 16px;
+    width: 25em;
+    gap: 3em;
+    padding: 0 1em;
+}
+.tweets{
+    display: flex;
+}
+
+
+h3{
+    text-align:center;
+}
+
+#social-proof{
+    background-color: var(--gris);
+}
+
+.card{
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+.card header{
+    display :flex;
+    align-items: start;
+    
+}
+
+.card header h4{
+    margin: 0;
+}
+.card header p{
+    margin: 0;
+}
+
+.avatar{
+    border-radius: 50%;
+    box-shadow: var(--sombra);
+    height: 50px;
+    width: 48px;
+}
+
+
+@media(max-width:768px){
+    nav select, nav input{
+        display: none
+    }
+}
