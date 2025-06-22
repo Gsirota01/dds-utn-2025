@@ -51,6 +51,105 @@ Los temas principales abordados en la clase fueron:
     *   Las **validaciones** se realizan en **distintos niveles** del sistema: cliente (UI), controladores, servicios, dominio y persistencia. Cada capa valida cosas diferentes, como tipos de datos, presencia de campos, reglas de negocio y consistencia interna.
     *   Un buen **manejo de errores** permite separar responsabilidades, facilita el *debugging*, proporciona respuestas útiles al usuario y permite un adecuado *logging* de problemas.
     *   Se recomienda **declarar errores personalizados** (ej., `NotFoundError`, `ValidationError`) para un mejor tratamiento de las excepciones.
-    *   Se introdujo el concepto de **middleware global de errores** en *Express*, que puede interceptar y manejar excepciones lanzadas desde cualquier capa, mejorando la limpieza del código del controlador.
+    * Se introdujo el concepto de **middleware global de errores** en *Express*, que puede interceptar y manejar excepciones lanzadas desde cualquier capa, mejorando la limpieza del código del controlador.
 
-La clase también mencionó brevemente la importancia de la fase de **análisis de requisitos** para modelar solo lo necesario, evitando funcionalidades superfluas (principios KISS y YAGNI).
+    ![alt text](image.png)
+
+Un **middleware** es un **componente intermedio** que se encarga de resolver ciertas tareas o de manejar cosas dentro del flujo de una aplicación. Actúan como capas intermedias y pueden tener diversas responsabilidades, como la seguridad o el manejo de errores.
+
+En Express, la implementación de un **middleware de manejo global de errores** es un ejemplo concreto de cómo se utiliza un middleware. Se busca que el código sea "mucho más clean, mucho más prolijo" al centralizar el manejo de excepciones y, potencialmente, eliminar bloques `try-catch` de los controladores.
+
+Aquí te doy un ejemplo de implementación basado en lo discutido en la clase:
+
+**1. Definición de Errores Personalizados (Custom Errors)**
+Es recomendable declarar tus propios tipos de errores de forma personalizada para que puedan ser tratados de manera más específica. Estos errores pueden heredar de la clase `Error` de JavaScript.
+Por ejemplo:
+```javascript
+// En un archivo como 'errors.js' o 'customErrors.js'
+
+class ValidationError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = 'ValidationError';
+        this.statusCode = 400; // Código de estado HTTP común para errores de validación
+    }
+}
+
+class NotFoundError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = 'NotFoundError';
+        this.statusCode = 404; // Código de estado HTTP común para recursos no encontrados
+    }
+}
+
+// Puedes exportarlos para usarlos en otros lugares (como los services)
+module.exports = {
+    ValidationError,
+    NotFoundError
+};
+```
+Cuando un service o cualquier otra capa necesite lanzar una excepción, en lugar de un `throw new Error('Mensaje')`, usaría `throw new NotFoundError('Alumno no encontrado')`.
+
+**2. Implementación del Middleware Global de Errores (Error Handler Middleware)**
+Este middleware es una función (o clase) que **recibe cuatro parámetros específicos**: `error`, `request`, `response`, y `next`. Express lo reconoce como un middleware de manejo de errores precisamente por esta firma. Su función es capturar cualquier excepción que no haya sido manejada previamente por un `try-catch`.
+
+```javascript
+// En un archivo como 'errorHandler.js' o 'middlewares/errorHandler.js'
+const { ValidationError, NotFoundError } = require('./errors'); // Importa tus errores personalizados
+
+const errorHandler = (err, req, res, next) => {
+    console.error(err); // Loguea el error para debugging
+
+    // Determina el código de estado y el mensaje de respuesta según el tipo de error
+    if (err instanceof ValidationError) {
+        return res.status(err.statusCode).json({ message: err.message }); // 400 Bad Request
+    }
+
+    if (err instanceof NotFoundError) {
+        return res.status(err.statusCode).json({ message: err.message }); // 404 Not Found
+    }
+
+    // Para cualquier otro error no especificado, devuelve un 500
+    return res.status(500).json({ message: 'Ocurrió un error interno en el servidor.' });
+};
+
+module.exports = errorHandler;
+```
+
+**3. Integración en la Aplicación Express (main.js)**
+Para usar este middleware, lo importas en el archivo principal de tu aplicación (como `main.js`) y lo **registras utilizando `app.use()`**. Es importante que este middleware se registre **al final** de todas tus rutas y otros middlewares, para que sea el último en capturar las excepciones.
+
+```javascript
+// En 'main.js' (o tu archivo principal de la aplicación Express)
+const express = require('express');
+const app = express();
+const alumnoController = require('./controllers/alumnoController'); // Tu controlador
+const errorHandler = require('./errorHandler'); // Tu middleware de manejo de errores
+
+// Middleware para parsear JSON en el cuerpo de las solicitudes (si lo usas)
+app.use(express.json());
+
+// Configuración de rutas (ejemplo)
+// Suponiendo que alumnoController.configurarRutas devuelve el router de Express
+app.use('/alumnos', alumnoController.configurarRutas());
+
+// ... otras configuraciones de rutas y middlewares ...
+
+// **Registra el middleware de manejo de errores al final**
+app.use(errorHandler);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
+```
+
+**Beneficios de esta implementación:**
+
+*   **Centralización del manejo de errores**: Todas las excepciones no capturadas por `try-catch` específicos son enviadas a este middleware, evitando la repetición de código para manejar errores en cada controlador.
+*   **Código más limpio**: Los controladores se vuelven más concisos, ya que no necesitan bloques `try-catch` extensos para manejar distintos tipos de errores, solo lanzan las excepciones.
+*   **Respuestas estandarizadas**: Asegura que las respuestas de error al cliente tengan un formato consistente (JSON) y códigos de estado HTTP apropiados.
+*   **Facilita el debugging**: Los errores se loguean en un punto centralizado, lo que ayuda a identificar y depurar problemas.
+
+Cuando un método en tu capa de `service` (o incluso de `dominio`) lanza una de estas excepciones personalizadas, Express burbujea la excepción hasta que es capturada por el `errorHandler` que configuraste con `app.use()`. Este `errorHandler` entonces se encarga de determinar la respuesta adecuada para el cliente.
