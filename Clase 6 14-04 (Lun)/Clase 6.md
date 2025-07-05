@@ -53,7 +53,7 @@ Los temas principales abordados en la clase fueron:
     *   Se recomienda **declarar errores personalizados** (ej., `NotFoundError`, `ValidationError`) para un mejor tratamiento de las excepciones.
     * Se introdujo el concepto de **middleware global de errores** en *Express*, que puede interceptar y manejar excepciones lanzadas desde cualquier capa, mejorando la limpieza del código del controlador.
 
-    ![alt text](image.png)
+    ![alt text](img/image.png)
 
 Un **middleware** es un **componente intermedio** que se encarga de resolver ciertas tareas o de manejar cosas dentro del flujo de una aplicación. Actúan como capas intermedias y pueden tener diversas responsabilidades, como la seguridad o el manejo de errores.
 

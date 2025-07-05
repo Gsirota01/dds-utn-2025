@@ -1,6 +1,6 @@
 [Video clase](https://youtu.be/ujvclaXx2Ew)
 
-![alt text](image.png)
+![alt text](img/image.png)
 
 **1. Testing Unitario:**
 *   **Definición:** El testing unitario se encarga de **testear cada componente aislado de la aplicación** (como una clase, un método o una función).
