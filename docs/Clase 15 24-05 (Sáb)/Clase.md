@@ -33,6 +33,7 @@ La presentación compara TDD con **BDD (Behavior-Driven Development)** y el **Mo
 | **Documentación**         | **Generada a partir de las pruebas**. | Documentación para negocio y técnica.                         | Documentación detallada.                                |
 
 Un ejemplo real compara cómo un chef prepararía una receta usando cada enfoque:
+
 *   **Cascada**: Menú → Comprar ingredientes → Cocinar → Servir.
 *   **TDD**: Receta → Cocinar → Ajustar (implica crear una expectativa/prueba y luego cumplirla).
 *   **BDD**: Charlar con clientes → Receta → Cocinar → Ajustar (foco en el comportamiento deseado por el cliente).
@@ -92,6 +93,7 @@ Un ejemplo real compara cómo un chef prepararía una receta usando cada enfoque
 ### Actividad Práctica - MegaSúper
 
 La presentación concluye con una actividad práctica llamada "MegaSúper", que involucra el desarrollo de un sistema de carrito de compras. Las características principales son:
+
 *   **Productos**: Tienen nombre, categoría, precio base y descuentos opcionales (porcentaje, monto fijo, 3x2).
 *   **Carrito de Compras**: Permite a los usuarios agregar productos en la cantidad que deseen y el sistema debe calcular el total aplicando los descuentos.
 *   **Funciones del Sistema**: Agregar productos al carrito y calcular el total.

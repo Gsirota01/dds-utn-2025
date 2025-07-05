@@ -171,3 +171,12 @@ function Timer() {
 
 ---
 
+
+*   **CSS-in-JS (CSS dentro de JavaScript)**:
+    *   **Concepto**: Es un patrón donde el CSS se escribe y compone usando JavaScript, en lugar de definirlo en archivos `.css` externos.
+    *   **Bibliotecas de Terceros**: No es una característica nativa de React, sino que es proporcionada por bibliotecas externas.
+    *   **Ventajas**: Puede ser útil para evitar la incomodidad de tener un archivo CSS separado por cada componente, permitiendo tener todo junto. También ayuda a evitar duplicaciones, superposiciones y errores al generar nombres de clase únicos automáticamente, lo que soluciona problemas con CSS global. Los estilos se eliminan automáticamente si el componente no se usa.
+    *   **Ejemplos de Bibliotecas**:
+        *   **Emotion**: Permite escribir estilos CSS con JavaScript y ofrece una composición potente de estilos.
+        *   **Styled Components**: Se enfoca en crear componentes ya estilados, inyectando los estilos de forma automática. Permite definir estilos directamente en variables o componentes que luego se renderizan como etiquetas HTML estiladas.
+    *   **Recomendación**: La clase mencionó que React generalmente sugiere definir estilos en archivos CSS separados y referenciarlos con `className`. El uso de CSS-in-JS es una alternativa para casos específicos donde se prefiera encapsular estilos directamente con los componentes.

@@ -43,8 +43,9 @@ $\color{lightblue} \text {regex}$: Coincidencia con expresión regular. { nombre
     * Validar, estructurar y manipular los datos más fácilmente
 
 **Por qué usar ODM ?**
+
 * Define esquema de datos
-* Maneja relaciones yu validaciones 
+* Maneja relaciones y validaciones 
 * Evita escribir queries Mongo "a mano" todo el tiempo
 * Permite usar métodos personalizados, middleware, etc.
 

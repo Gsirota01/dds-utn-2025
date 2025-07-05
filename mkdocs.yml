@@ -1,0 +1,72 @@
+# Información del sitio
+site_name: Mi Curso de Programación
+site_author: Gsirota01
+
+# Tema visual
+theme:
+  name: material
+  language: es # Cambia el idioma de la interfaz a español
+  palette:
+    # Paleta para modo claro
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    # Paleta para modo oscuro
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
+# Estructura de navegación (¡Aquí agregas tus clases!)
+nav:
+  - 'Inicio': 'index.md'
+  - 'Clase 1 (29-03)': 'Clase 1 29-03 (Sáb)/Clase.md'
+  - 'Clase 3 (05-04)': 'Clase 3 05-04 (Sáb)/Clase.md'
+  - 'Clase 4 (07-04)': 'Clase 4 07-04 (Lun)/Clase.md'
+  # ... y así sucesivamente con todas tus clases
+  - 'Clase 25 (05-07)': 'Clase 25 05-07 (Lun)/Clase.md'
+# mkdocs.yml
+
+site_name: Mi Curso de Programación
+site_author: Gsirota01
+
+theme:
+  name: material
+  language: es
+
+# Estructura de navegación
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true # Permite usar los delimitadores $...$ y $$...$$
+
+# Carga la librería MathJax en cada página
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+nav:
+  - 'Inicio': 'index.md'
+  - 'Clase 1 (29-03)': 'Clase 1 29-03 (Sáb)/clase.md'
+  - 'Clase 2 (31-03)': 'Clase 2 31-03 (Lun)/Clase.md'
+  - 'Clase 3 (05-04)': 'Clase 3 05-04 (Sáb)/Clase.md'
+  - 'Clase 4 (07-04)': 'Clase 4 07-04 (Lun)/Clase.md'
+  - 'Clase 6 (14-04)': 'Clase 6 14-04 (Lun)/Clase.md'
+  - 'Clase 7 (19-04)': 'Clase 7 19-04 (Sáb)/Clase.md'
+  - 'Clase 8 (26-04)': 'Clase 8 26-04 (Sáb)/Clase.md'
+  - 'Clase 10 (03-05)': 'Clase 10 03-05 (Sáb)/Clase.md'
+  - 'Clase 11 (05-05)': 'Clase 11 05-05 (Lun)/Clase.md'
+  - 'Clase 12 (10-05)': 'Clase 12 10-05 (Sáb)/Clase.md'
+  - 'Clase 13 (12-05)': 'Clase 13 12-05 (Lun)/Clase.md'
+  - 'Clase 15 (24-05)': 'Clase 15 24-05 (Sáb)/Clase.md'
+  - 'Clase 16 (26-05)': 'Clase 16 26-05 (Lun)/Clase.md'
+  - 'Clase 17 (31-05)': 'Clase 17 31-05 (Sáb)/Clase.md'
+  - 'Clase 18 (02-06)': 'Clase 18 02-06 (Lun)/Clase.md'
+  - 'Clase 19 (07-06)': 'Clase 19 07-06 (Sáb)/Clase.md'
+  - 'Clase 20 (14-06)': 'Clase 20 14-06 (Sáb)/Clase.md'
+  - 'Clase 21 (21-06)': 'Clase 21 21-06 (Sáb)/Clase.md'
+  - 'Clase 22 (23-06)': 'Clase 22 23-06 (Lun)/Clase.md'
+  - 'Clase 23 (28-06)': 'Clase 23 28-06 (Sáb)/Clase.md'
+  - 'Clase 24 (30-06)': 'Clase 24 30-06 (Lun)/Clase.md'
+  - 'Clase 25 (05-07)': 'Clase 25 05-07 (Lun)/Clase.md'
