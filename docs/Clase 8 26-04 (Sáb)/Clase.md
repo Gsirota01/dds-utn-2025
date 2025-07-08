@@ -1,6 +1,7 @@
 [26/04/2025]
 
 Temas:
+
 - Construcción de una API simple sin persistencia - Parte II.
 - Incorporación de manejo de errores
 - Asincronismo
