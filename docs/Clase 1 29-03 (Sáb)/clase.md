@@ -7,7 +7,7 @@
 * Clases los lunes
 * Talleres los Sábados
 
-* Profesores: Enrique Reinosa, Juan Pablo(?) y Ezequiel Escobar
+* Profesores: Enrique Reinosa, Juan Pablo Castiglione y Ezequiel Escobar
 
 
 **Javascript**
