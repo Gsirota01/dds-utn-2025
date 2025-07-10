@@ -49,14 +49,6 @@ La paginación es una técnica crucial para construir APIs, ya que permite **div
     *   El **repositorio** es quien calcula el *offset* y corta la lista de datos para devolver solo los registros correspondientes a la página.    
 ---
 
-## Paginacion
-
-¡Claro! Basándonos en la explicación de la Clase 04 sobre Modelado en Capas y Paginación, te proporciono un ejemplo de implementación de paginación en JavaScript, utilizando una estructura de capas (Controlador, Servicio, Repositorio) y datos en memoria para simplificar.
-
-La **paginación** es una técnica crucial para las APIs que permite **dividir grandes volúmenes de datos en porciones más pequeñas, llamadas páginas**. Esto mejora el rendimiento, reduce el uso de la red y ofrece una experiencia de usuario más cómoda al evitar el "scroll infinito".
-
-En este ejemplo, simularemos una lista de productos almacenada en memoria y expondremos una API REST paginada.
-
 ### Estructura del Proyecto:
 
 ```

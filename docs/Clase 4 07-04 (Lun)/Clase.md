@@ -79,8 +79,20 @@ Es una arquitectura basada en el protcolo <u>**C-S**</u> pero en el medio tanto 
 * La Arquitectura Web es el conjunto de principios, tecnologías y estructuras que definen cómo se organizan y comunican los componentes de una aplicación web.
 
 * Se basa en la interacción entre clientes y servidores a través de protocolos como HTTP/HTTPS, permitiendo la distribución de información y la ejecución de aplicaciones en la web.
+
 ![arq-web](img/arq-web.png)
 
 ---
 ## API REST
 Se basa en el protocolo HTTP y es una de las arquitecturas más populares para desarrollar APIs
+
+* Recursos: En REST, toda la información se trata como un "recurso" (ej.
+un usuario, un producto) que es manipulable a través de una URI única.
+Las rutas deben usar sustantivos en plural para nombrar los
+recursos (ej. /users), no verbos.
+* Operaciones: Las acciones sobre los recursos (crear, leer, actualizar,
+borrar) se realizan utilizando los métodos HTTP.
+* Formato de Datos: Generalmente se utiliza JSON por ser un formato
+ligero, fácil de leer para los humanos y de procesar para las máquinas.
+* Idempotencia: Una operación es idempotente si realizarla múltiples
+veces produce el mismo resultado que realizarla una sola vez

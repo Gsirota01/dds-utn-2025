@@ -59,7 +59,6 @@ Un **middleware** es un **componente intermedio** que se encarga de resolver cie
 
 En Express, la implementación de un **middleware de manejo global de errores** es un ejemplo concreto de cómo se utiliza un middleware. Se busca que el código sea "mucho más clean, mucho más prolijo" al centralizar el manejo de excepciones y, potencialmente, eliminar bloques `try-catch` de los controladores.
 
-Aquí te doy un ejemplo de implementación basado en lo discutido en la clase:
 
 **1. Definición de Errores Personalizados (Custom Errors)**
 Es recomendable declarar tus propios tipos de errores de forma personalizada para que puedan ser tratados de manera más específica. Estos errores pueden heredar de la clase `Error` de JavaScript.

@@ -6,11 +6,10 @@ Temas:
 - Incorporación de manejo de errores
 - Asincronismo
 
+# Event Loop
 
 En una tarea sincrónica las operaciones de I/O se realizan de manera bloqueante, es por ello que es necesario el uso de multihilos en caso de no querer bloqueos. En cambio una tarea asincronica podemos manejar esas operaciones concurrentes en un único hilo.
 
-
-### Event Loop
 
 ![alt text](img/image-6.png)
 
