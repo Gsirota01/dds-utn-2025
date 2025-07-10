@@ -22,6 +22,7 @@ Es una arquitectura donde participan 2 componentes:
 ![cliente-servidor](img/cliente-servidor.png)
 
 Se pueden clasificar según las responsabilidades: 
+
  * <u>Cliente activo, Servidor pasivo</u> $\to$ el cliente es quien posee la mayor cantidad de la lógica del negocio. El servidor limita su funcionalidad a la persistencia
  * <u>Cliente pasivo, Servidor pasivo</u>  $\to$ Ambos componentes poseen baja lógica de negocio o simplemente son considerados "componentes intermedios" de algo "más grande"
  * <u>Cliente pasivo , Servidor activo ("Cliente liviano")</u>  $\to$ El servidor posee la mayor lógica de negocio, mientras que el cliente se limita a presentar los datos
@@ -29,22 +30,46 @@ Se pueden clasificar según las responsabilidades:
 
 
 Analizando ventajas y desventajas sobre un **Cliente Pasivo - Servidor Activo** 
+
 <u>Ventajas</u>:
+
 * Mantenibilidad: Cambios de funcionalidad Centralizados
 * Seguridad: Centralización de Control de Accesos a recursos
 
 <u>Desventajas (*)</u>:
+
 * Eficiencia (tiempo de respuesta): El servidor puede ser un cuello de botella
 * Disponibilidad: Único punto de falla $\to$ Considerando un único Servidor
 
 ---
 ## HTTP (HyperText Transfer Protocol / Protocolo de transferencia de hipertexto)
 Protocolo de comunicación basado en el modelo **<u>C-S</u>** que define cómo se deben intercambiar datos en la web. Es un protocolo de aplicación dentro de la pila de protocolos de Internet y funciona sobre TCP
-* Pertenece a la capia
 
 ###### Funcionamiento básico
 1. cuando un clinete (normlamente un navegador) necesita acceder a un recurso en la web, envía una solicitud HTTP (HTTP request) a un servidor web
 2. Este servidor procesa la solicitud y responde con una respuesta (response)
+
+
+## Métodos (Verbos) HTTP
+
+- **GET**: Solicita un recurso sin alterarlo.
+- **POST**: Envía datos para crear un nuevo recurso en el servidor.
+- **PUT**: Actualiza o crea un recurso en una ubicación específica.
+- **DELETE**: Elimina un recurso.
+- **PATCH**: Modifica parcialmente un recurso existente.
+
+---
+
+## Códigos de Estado HTTP
+
+Indican el resultado de una petición. Se agrupan en familias:
+
+- **2xx (Éxito)**: La petición fue exitosa  
+  - Ejemplos: `200 OK`, `201 Created`
+- **4xx (Error del Cliente)**: Hubo un error en la petición del cliente  
+  - Ejemplo: `404 Not Found`
+- **5xx (Error del Servidor)**: El servidor falló al procesar una petición válida  
+  - Ejemplo: `500 Internal Server Error`
 
 ---
 

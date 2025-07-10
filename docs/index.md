@@ -1,0 +1,26 @@
+# Bienvenido al curso
+
+## Clases
+
+- [Clase 1 (29-03)](Clase%201%2029-03%20(S%C3%A1b)/clase.md)
+- [Clase 2 (31-03)](Clase%202%2031-03%20(Lun)/Clase.md)
+- [Clase 3 (05-04)](Clase%203%2005-04%20(S%C3%A1b)/Clase.md)
+- [Clase 4 (07-04)](Clase%204%2007-04%20(Lun)/Clase.md)
+- [Clase 6 (14-04)](Clase%206%2014-04%20(Lun)/Clase.md)
+- [Clase 7 (19-04)](Clase%207%2019-04%20(S%C3%A1b)/Clase.md)
+- [Clase 8 (26-04)](Clase%208%2026-04%20(S%C3%A1b)/Clase.md)
+- [Clase 10 (03-05)](Clase%2010%2003-05%20(S%C3%A1b)/Clase.md)
+- [Clase 11 (05-05)](Clase%2011%2005-05%20(Lun)/Clase.md)
+- [Clase 12 (10-05)](Clase%2012%2010-05%20(S%C3%A1b)/Clase.md)
+- [Clase 13 (12-05)](Clase%2013%2012-05%20(Lun)/Clase.md)
+- [Clase 15 (24-05)](Clase%2015%2024-05%20(S%C3%A1b)/Clase.md)
+- [Clase 16 (26-05)](Clase%2016%2026-05%20(Lun)/Clase.md)
+- [Clase 17 (31-05)](Clase%2017%2031-05%20(S%C3%A1b)/Clase.md)
+- [Clase 18 (02-06)](Clase%2018%2002-06%20(Lun)/Clase.md)
+- [Clase 19 (07-06)](Clase%2019%2007-06%20(S%C3%A1b)/Clase.md)
+- [Clase 20 (14-06)](Clase%2020%2014-06%20(S%C3%A1b)/Clase.md)
+- [Clase 21 (21-06)](Clase%2021%2021-06%20(S%C3%A1b)/Clase.md)
+- [Clase 22 (23-06)](Clase%2022%2023-06%20(Lun)/Clase.md)
+- [Clase 23 (28-06)](Clase%2023%2028-06%20(S%C3%A1b)/Clase.md)
+- [Clase 24 (30-06)](Clase%2024%2030-06%20(Lun)/Clase.md)
+- [Clase 25 (05-07)](Clase%2025%2005-07%20(Lun)/Clase.md)
