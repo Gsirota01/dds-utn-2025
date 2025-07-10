@@ -36,7 +36,7 @@ En una arquitectura web típica cliente-servidor:
 *   **Organización:** Es recomendable **segmentar la aplicación en componentes**.
     *   Evitar poner toda la aplicación en `App.js`.
     *   Crear **nuevos archivos para componentes** (ej., `Header.jsx`, `Navbar.jsx`).
-    *   Los elementos deben estar **envueltos en una única etiqueta** (un `div` o un **React Fragment** `<></>`) al ser retornados por una función componente.
+    *   Los elementos deben estar **envueltos en una única etiqueta** (un `div` o un **React Fragment** <> &lt;/&gt;) al ser retornados por una función componente.
     *   Los componentes deben ser **exportados** (ej., `export default Header`) para poder ser importados en otros archivos.
     *   Importancia de **segmentar también el CSS** por componente para mantenerlo más organizado y personalizado.
 *   **Estructura de Carpetas Sugerida:**
