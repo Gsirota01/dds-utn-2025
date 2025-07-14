@@ -1,5 +1,6 @@
 ### Repaso de Renderizado (SSR vs. CSR)
 En una arquitectura web típica cliente-servidor:
+
 *   **Server-Side Rendering (SSR) / Cliente Liviano:** El servidor devuelve directamente una vista **HTML ya formada**. La lógica de interacción recae en el servidor. Ejemplos: Wikipedia.
 *   **Client-Side Rendering (CSR) / Cliente Pesado:** El servidor devuelve **JSON**, y la vista debe ser generada por el cliente. Esto puede hacer que la **carga inicial sea más lenta** porque se debe renderizar el JavaScript. El procesamiento en el cliente es mucho mayor, implicando mayor uso de memoria y batería en dispositivos móviles. La lógica de interacción recae en el cliente. Ejemplos: LinkedIn, Instagram.
 
@@ -55,6 +56,7 @@ En una arquitectura web típica cliente-servidor:
 
 ### Enrutamiento con React Router DOM
 Para manejar el cambio de vistas en una SPA, se utiliza la biblioteca **React Router DOM**.
+
 *   **Instalación:** `npm install react-router-dom`.
 *   **Componentes Clave:**
     *   **`BrowserRouter`:** El componente principal que envuelve toda la aplicación para habilitar el enrutamiento.

@@ -63,6 +63,7 @@ Aquí un resumen detallado de los puntos principales:
 
 ### Cuestiones de Sincronismo
 **Preguntas Clave**: 
+
 1. ¿Las respuestas del backend son instantáneas? 
 
     No siempre son instantáneas. Pueden demorar por sobrecarga del servidor, lógica compleja y costosa, o una decisión de procesar la solicitud **asíncronamente**.
@@ -70,6 +71,7 @@ Aquí un resumen detallado de los puntos principales:
 2. ¿Qué pasa si el backend procesa la solicitud más tarde o realiza un procesamiento pesado? 
 
     **Procesamiento Asíncrono**:
+
     *   Si el backend procesa una solicitud asíncronamente, generalmente devuelve un **ID de operación**.
     *   El frontend puede usar este ID para realizar **polling**: preguntar al backend cada ciertos segundos/minutos si la operación ya finalizó.
     *   El ID de operación se puede guardar en **`local storage`** (almacenamiento clave-valor en el navegador) o en el **State** (contexto de React).
@@ -118,12 +120,16 @@ Aquí un resumen detallado de los puntos principales:
         }
         ```
 4. ¿El usuario puede seguir usando el sistema durante la request?.
+
     **Interacción del Usuario durante las Solicitudes**:
+
     *   **Pantalla de libre navegación**: Permite al usuario moverse por el sistema durante una request.
     *   **Pantalla cautiva**: No permite al usuario salir o moverse a otra pantalla hasta que la acción termine (ej. checkout en e-commerce, pagos en billeteras virtuales).
     *   Las pantallas cautivas son necesarias cuando el **proceso de negocio es sincrónico**, incluso si las llamadas al backend son asíncronas, porque el usuario debe percibir una única secuencia de acción. Para el TP, la reserva de un alojamiento podría ser un ejemplo de pantalla cautiva.
 --- 
+
 ## Manejo de Usuarios
+
 1.  **Conceptos Fundamentales**:
     *   **Autenticación (`Quién sos`)**: Reconocer al usuario que está usando el sistema.
     *   **Autorización (`Qué podés hacer`)**: Determinar qué acciones puede realizar el usuario (manejo de roles, permisos).

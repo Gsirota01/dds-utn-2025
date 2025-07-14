@@ -23,7 +23,9 @@
 *   Se mencionó la posibilidad de crear **Hooks personalizados** para reutilizar lógica con estado en varios componentes.
 
 ### Tipos de Hooks
+
 La clase hizo hincapié en `useState` y `useEffect`, pero se mencionaron otros tipos de Hooks:
+
 *   **De estado (`useState`, `useReducer`)**: Permiten que un componente "recuerde" información, como la entrada del usuario, y manipular el estado para que el componente se vuelva a renderizar. Sin ellos, los cambios de variables no generan dinamismo en la interfaz.
 *   **De efecto (`useEffect`)**: Permiten ejecutar código **después de que el componente se renderiza**, basado en dependencias concretas. Son útiles para efectos secundarios como obtener datos de APIs, actualizar directamente el DOM o usar temporizadores.
 *   **De referencia (`useRef`)**: Para manejar referencias directamente a nodos del DOM y rescatar información que no se utiliza para la renderización.

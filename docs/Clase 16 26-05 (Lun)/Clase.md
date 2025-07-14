@@ -2,6 +2,7 @@
 Los patrones de interacción son los encargados de organizar la forma en la que las distintas capas de una aplicación interactúan entre sí
 
 **Objetivos principales**: 
+
 * Separacion de responsabilidades: Cada capa tiene un rol claro y específico (Single Rensponsability Principle)
 * Facilita el mantenimiento y la evolución de app complejas
 * Promueve el testing aislado de lógica y presentación 
@@ -23,6 +24,7 @@ Los patrones de interacción son los encargados de organizar la forma en la que 
 **MVC Web**: El patrón MVC se adapta al entorno web debido a la naturaleza sin estado del protocolo HTTP. Actualmente, la mayoría de los desarrollos web con interfaz gráfica se inspiran en MVC o alguna variante. 
 
 El flujo típico de MVC en una web:
+
 1. El navegador (cliente) hace una solicitud HTTP al servidor.
 2. El Controlador, a menudo manejado por un Framework que se encarga del ruteo, maneja la petición.
 3. El Controlador consulta al Modelo (que incluye la lógica de negocio y acceso a datos/repositorios).
@@ -44,19 +46,22 @@ La estructura del MVVM consta de tres componentes:
 2. Vista (View): Es la interfaz de usuario (UI), compuesta, por ejemplo, por código HTML. Es donde el usuario interactúa.
 3. Vista Modelo (View Model): Este componente reemplaza al Controlador de MVC. Es el encargado de exponer los datos y los comandos a la vista. Contiene la lógica de presentación y también tiene estado. En el contexto de un framework, podría ser una clase _'objetosa'_ asociada a la vista, con atributos y métodos llamables directamente desde la vista.
 Las interacciones en MVVM se describen de la siguiente manera:
-    * La Vista observa al View Model.
-    * El View Model interactúa con el Model.
+
+* La Vista observa al View Model.
+* El View Model interactúa con el Model.
 
 Características mencionadas de MVVM:
+
 *  Alto nivel de desacoplamiento entre la vista y la lógica (de negocio, que está en el backend separado en una arquitectura distribuida).
 * Es ideal para el data binding bidireccional.
 * Es común en frameworks declarativos o reactivamente orientados.
-Ejemplos de uso de MBVM incluyen:
+Ejemplos de uso de MVVM incluyen:
 * Frameworks web como Angular y View.
 * Aplicaciones móviles con Android moderno.
 * Aplicaciones de escritorio con tecnologías como Windows Presentation Foundation (WPF).
 
 Diferencias con MVC:
+
 | Aspecto                           | MVC                                                           | MVVM                                                                           |
 | --------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | **View → Controller / ViewModel** | La *View* delega acciones al *Controller*.                    | La *View* se vincula a comandos en la *ViewModel* (binding bidireccional).     |
@@ -67,12 +72,15 @@ Diferencias con MVC:
 ####  Data binding
  Técnica que permite sincronizar automáticamente el estado de la UI con los datos de la app (modelo o viewModel)
 
+
 Existen 2 tipos de **Data binding** : 
 Bidireccional (two-way) 
+
 * Cambios en al UI actualizan el modelo y viceversa
 * Tipico en MVVM con frameworks como Angular, Vue, etc.
 
 Unidireccional (one-way)
+
 * Los datos fluyen solo del modelo a la vista
 * Típico en React, o MVP dende la vista es pasiva
 
@@ -83,12 +91,14 @@ El MVP es una evolución de MVC.
 En MVP, el componente clave que aparece es el Presentador (Presenter). El Presenter actúa como intermediario entre la Vista (View) y el Modelo (Model).
 
 La estructura del MVP se compone de tres elementos principales:
+
 * Modelo (Model): Contiene los datos y la lógica de negocio.
 * Vista (View): Es la interfaz de usuario (UI). Una característica fundamental en 
 MVP es que la vista es totalmente pasiva y delega toda lógica al Presenter
 * Presentador (Presenter): Contiene la lógica de presentación, controla la vista y coordina con el modelo.
 
 El concepto de que la Vista es pasiva significa que:
+
 * Solamente va a mostrar, no va a tener otra lógica.
 * Se encarga de mostrar y nada más.
 * En un contexto web, es esencialmente código HTML puro y nada más.
@@ -96,6 +106,7 @@ El concepto de que la Vista es pasiva significa que:
 * Las vistas son más fáciles de testear porque no tienen lógica.
 
 Las interacciones en MVP ocurren de la siguiente manera:
+
 * Las acciones del usuario (eventos) se envían desde la Vista hacia el Presentador.
 * El Presentador interactúa hacia la Vista y el Modelo.
 Este patrón también se menciona en relación con el data binding unidireccional, donde los datos fluyen solo del modelo a la vista.
@@ -112,6 +123,7 @@ Si nos situamos en una Arq web el proceso de rendering se puede dar tanto del la
 
 El HTML se genera en el lado del servidor ante cada solicitud del usuario
 Flujo tipico consta de : 
+
 1. El navegador hace una petición HTTP
 2. El servidor ejecuta lógica (acceso a BD, generación de templates, etc.)
 3. Genera HTML completo y lo envía al navegador
@@ -121,11 +133,13 @@ A las webs de este tipo se las conoce como **"Clientes livianos"**
 
 
 ✅Ventajas
+
  * Simplicidad en apps con poca interacción.
  * SEO amigable (el contenido ya está renderizado)
 
 
 ❌Desventajas
+
  * Cada cambio requiere una nueva petición al servidor 
  * Menor interactividad (sin JS, no hay dinamismo)
  * Puede generar más carga en el servidor
@@ -134,6 +148,7 @@ A las webs de este tipo se las conoce como **"Clientes livianos"**
 El servidor entrega una página vacía (HTML mínimo) y el código JS en el navegador se encarga de renderizar **todo**
 
 Flujo tipico consta de : 
+
 1. El navegador pide una página -> Recibe HTML básico + JS (del servidor) 
 2. El navegador descarga y ejecuta el JS
 3. El JS construye la UI (DOM) y carga datos desde APIs.
@@ -142,17 +157,20 @@ Flujo tipico consta de :
 A las webs de este tipo se las conoce como **"Clientes pesados"**
 
 ✅Ventajas
+
  * Mayor interactividad ya que tiene una experiencia muy fuida e interactiva
  * Menor carga del servidor
  * Ideal para apps con muchas interacciones o componentes en tiempo real
 
 
 ❌Desventajas
+
  * Peor SEO si no se usa un prerendering -> Ya que el SEO busca por el HTML de la página, y si se renderiza todo del lado del cliente no se corresponde una buena posicion SEO
  * Mayor complejidad inicial y en seguridad 
 
 
 ## Single Page Application - SPA
+
 * En pocas palabras, SPA son las siglas de Single Page Application. Es un tipo de aplicación web donde todas las pantallas las muestra en la misma página, sin recargar el navegador.
 * Técnicamente, una SPA es un sitio donde existe un único punto de entrada, generalmente el archivo index.html. En la aplicación no hay ningún otro archivo HTML al que se pueda acceder de manera separada y que nos muestre un contenido o parte de la aplicación, toda la acción se produce dentro del mismo index.html.
 * Es un caso particular de CSR, donde la aplicación se carga una sola vez y luego se actualiza dinámicamente sin recargar la página.
@@ -161,12 +179,14 @@ A las webs de este tipo se las conoce como **"Clientes pesados"**
 * El efecto de las SPA es que cargan muy rápido sus pantallas. De hecho aunque parezcan páginas distintas, realmente es la misma página por eso la respuesta es muchas veces instantánea para pasar de una pagina a otra.
 
 Ventajas:
+
 * UX fluida
 * Navegación rápida entre vistas
 * Ideal para aplciaciones interactivas: Dashboard, chats, etc.
 * Fácil desacoplamiento del backend 
 
 Desventajas:
+
 * SEO dificil (contenido generado por JS)
 * Tiempo de carga inicial más largo (bundle JS grande)
 * Más complejidad en seguridad ya que todo el código esta del lado del cliente

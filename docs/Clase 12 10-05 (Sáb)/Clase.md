@@ -1,7 +1,7 @@
 Vamos a estar trabajando con la persistencia de datos con mongo DB
 
 ###### Persistencia 
-- La persistencia se refiere a que el estado d eun Sistema sobrevive más allá de una única ejecución
+- La persistencia se refiere a que el estado de un Sistema sobrevive más allá de una única ejecución
 - Esto se logra, en la práctica, almacenando dicho estado en archivos o en una Base de datos
 
 

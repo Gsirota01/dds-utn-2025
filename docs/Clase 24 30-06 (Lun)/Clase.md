@@ -48,6 +48,7 @@ Si en nuestro ejemplo utilizamos un dataset de EEUU y queremos aplicarlo en Arge
 Por ello es importante la calidad del dataset y la diversidad de ejemplos que contenga.
 
 **¿ Como aprenden los modelos?**
+
 * A través de un proceso llamado entrenamiento:
     * Se le dan datos de entrada y se compara su salida con la respuesta correcta.
     * Se ajustan los parámetros del modelo para minimizar el error entre la salida del modelo y la respuesta correcta.
@@ -58,19 +59,23 @@ Las IA generativas tambien son entrenadas de esta manera, pero en lugar de clasi
 
 
 **¿Que es la IA generativa?**
+
 * Rama de la IA que genera nuevo contenido a partir de datos aprendidos.
 * Se entrena con grandes volúmenes de información.
 * Capaz de producir texto, imágenes, música, código, etc.
 * No siempre repite : Intenta crear nuevas combinaciones. (A veces repite la salida, pero no es su objetivo principal, puede llegar a modificar la salida)
 
 ### Temperatura de un modelo
+
 En un modelo generativo:
+
 * La temperatura es un parámetro que controla el grado de aleatoriedad en las respuestas generadas.
 * Una temperatura baja (cercana a 0) hace que el modelo sea más determinista y predecible.
 * Una temperatura alta (cercana a 1) hace que el modelo sea más creativo y variable o impredecible.
 * Importante para ajustar precisión vs. diversidad en generación de código. -> Si queremos utilizar una IA generativa para generar código, debemos tener en cuenta la temperatura para que el código  y que tal vez con una temperatura alta, el código generado no sea siempre el más óptimo o correcto.
 
 ### Semilla de un modelo (Seed)
+
 * Una semilla es un valor numérico inicila que controla la aleatoriedad de un modelo.
 * Teoricamente Usar la misma semilla en diferentes ejecuciones garantiza resultados consistentes. Pero en la práctica, puede haber variaciones debido a la naturaleza de los modelos y su entrenamiento.
 
@@ -124,8 +129,8 @@ Si usas temperatura 0.9 y seed 1234 para un mismo prompt, podés tener una histo
 * **Iteración**: No siempre sale bien al primer intento, en ese caso hay que ajustar y refinar tu prompt si la respuesta no es lo esperado.
 
 **¿Acelera el desarrollo?**
-1. Ayuda en la generación de código repetitivo o boilerplate.
-    
+
+1. Ayuda en la generación de código repetitivo o boilerplate.    
 
 2. Acelera prototipado
 
@@ -141,9 +146,6 @@ Si usas temperatura 0.9 y seed 1234 para un mismo prompt, podés tener una histo
     * Traducir código de un lenguaje a otro. (Con limitaciones) 
 
 **Pero no reemplaza el entendimiento humano!!**
-
-
-Aquí tienes el texto de la imagen, con una ampliación al final:
 
 ---
 

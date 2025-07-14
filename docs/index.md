@@ -9,6 +9,7 @@
 - [Clase 6 (14-04)](Clase%206%2014-04%20(Lun)/Clase.md)
 - [Clase 7 (19-04)](Clase%207%2019-04%20(S%C3%A1b)/Clase.md)
 - [Clase 8 (26-04)](Clase%208%2026-04%20(S%C3%A1b)/Clase.md)
+- [Clase 9 (28-04)](Clase%209%2028-04%20%28Lun%29/Clase.md)
 - [Clase 10 (03-05)](Clase%2010%2003-05%20(S%C3%A1b)/Clase.md)
 - [Clase 11 (05-05)](Clase%2011%2005-05%20(Lun)/Clase.md)
 - [Clase 12 (10-05)](Clase%2012%2010-05%20(S%C3%A1b)/Clase.md)

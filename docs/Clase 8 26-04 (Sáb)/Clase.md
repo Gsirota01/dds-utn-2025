@@ -1,5 +1,3 @@
-[26/04/2025]
-
 Temas:
 
 - Construcción de una API simple sin persistencia - Parte II.
@@ -81,7 +79,7 @@ console.log('3');
 * Hay que tener cuidado de no saturar la event loop con operaciones síncronas largas.
 
 ---
-
+# Como usar el event loop en Javascript
 ![alt text](img/image-5.png)
 
 
@@ -202,7 +200,9 @@ En caso de no querer que nos tire abajo el proceso principal se puede agregar un
 
 ---
 #### **Refactorización de Código Síncrono a Asíncrono**
+
   Ejemplo práctico: Se demostró la migración de un backend Node.js (Controller, Service, Repository) usando `fs.promises` para interactuar con un archivo JSON y `path` para manejar rutas.
+  
   *   Las operaciones de base de datos como paginación o conteo deben delegarse a la propia base de datos, no cargar todos los datos en memoria.
 
 --

@@ -9,12 +9,13 @@ Esto se logra almacenando ese estado en medios persistentes como bases de datos 
 | 📄 **En archivos**        | ✅ Fácil de implementar, portable, sin necesidad de software adicional     | 🐌 Manejo de concurrencia complejo, búsquedas lentas, riesgo de corrupción   | 📁 Archivos `.json`, `.csv`, logs, configuraciones, juegos que guardan progreso local     |
 | 🗄️ **En base de datos**   | 🔐 Acceso concurrente, integridad, recuperación ante fallos               | ⚙️ Mayor complejidad, requiere mantenimiento, dependencia externa            | 🧾 Apps empresariales con **PostgreSQL**, **MySQL**, **MongoDB**, **Oracle**              |
 | 🧱 **En objetos**          | 🔄 Mapeo natural con objetos del dominio, mantiene relaciones              | ⚠️ Dificultad con BDs relacionales, versionado, rendimiento                  | 🧬 Serialización (`Java Serializable`, `Python pickle`), ORMs como **Hibernate**, **EF**  |
----
+
 # Clasificación de Bases de datos
 ## Bases de Datos Relacionales (SQL)
-    *   **Almacenamiento:** Datos en **tablas** con **esquemas rígidos** y bien definidos, siguiendo el modelo relacional.
-    *   **Ejemplos:** MySQL, PostgreSQL, Oracle, SQL Server.
-    *   **En la Carrera:** Se profundizarán en la materia "Base de Datos / Gestión de Datos" y se usarán con ORMs en "Diseño de Sistemas".
+
+*   **Almacenamiento:** Datos en **tablas** con **esquemas rígidos** y bien definidos, siguiendo el modelo relacional.
+*   **Ejemplos:** MySQL, PostgreSQL, Oracle, SQL Server.
+*   **En la Carrera:** Se profundizarán en la materia "Base de Datos / Gestión de Datos" y se usarán con ORMs en "Diseño de Sistemas".
 
 ## Bases de Datos Orientadas a Objetos
 *   **Características:** Persisten objetos tal como están en el código, soportando herencia, encapsulamiento y otros conceptos del paradigma orientado a objetos.
@@ -29,7 +30,7 @@ menos comunes.
 * Facilitan la **escalada horizontal** (añadir más servidores) para manejar más usuarios concurrentes, a diferencia de las relacionales que son más difíciles de escalar horizontalmente. Las NoSQL pueden replicar datos de forma asíncrona para priorizar la disponibilidad.
 
 
-### Tipos
+### Tipos de BD NoSQL
 * **Documentales**
     * Muy flexibles: los documentos pueden tener estructuras distintas.
     * MongoDB, CouchDB, etc.
